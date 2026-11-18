@@ -1,0 +1,29 @@
+Project Topic
+-------------
+BactiSense: predicting antibiotic resistance in bacteria with machine learning.
+Project Description
+Bacteria can become resistant to antibiotics, and lab tests to find out take time. In this project, I built a model that predicts whether bacteria will be resistant (R) or susceptible (S) to an antibiotic. It uses the patient’s age, gender and health details, the type of bacteria, and the antibiotic. I cleaned a messy dataset of about 10,000 samples, split train and test by patient so the test score is fair, and compared four models. Naive Bayes did best, with about 74% accuracy, and it catches about 71% of truly resistant cases. I then built a Streamlit web app where anyone can enter details and get a prediction with probabilities and the model’s performance. This is a learning project and not for real medical use.
+
+Objectives
+-----------
+•	Predict whether bacteria will be resistant (R) or susceptible (S) to a given antibiotic.
+•	Clean a messy real-world dataset so it is ready for machine learning.
+•	Compare several models and choose the one that catches resistant cases best.
+•	Build a simple web app so anyone can try the model.
+
+Key Concepts
+------------
+•	Antibiotic resistance: bacteria stop responding to the medicine meant to kill them.
+•	Classification: the model puts each case into one of two classes, R or S.
+•	Class imbalance: there are about twice as many S results as R results, so the model needs balancing.
+•	Evaluation metrics: accuracy, precision, recall and F1 score, with a confusion matrix to show the mistakes.
+
+
+Techniques Implemented
+----------------------
+•	Cleaned the data by removing empty rows, fixing spelling mistakes in bacteria names, making labels consistent, and handling missing values.
+•	Reshaped the data from one row per sample to one row per sample and antibiotic, which gave about 146,000 rows.
+•	Split train and test by patient ID so the same patient never appears in both.
+•	Built one pipeline that fills missing values, scales age, and one-hot encodes the categories.
+•	Trained Naive Bayes with balanced sample weights and compared it with Random Forest, Decision Tree and KNN.
+•	Saved the model with pickle and built a Streamlit app that gives predictions, probabilities and performance charts.
